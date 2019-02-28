@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  { path: 'Inicio', loadChildren: './inicio/inicio.module#InicioPageModule' },
-  { path: 'Match', loadChildren: './match/match.module#MatchPageModule' },
-  { path: 'Perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
-  { path: 'Reproductor', loadChildren: './reproductor/reproductor.module#ReproductorPageModule' },
-  { path: 'Buscar', loadChildren: './buscar/buscar.module#BuscarPageModule' },
-  { path: 'Playlist', loadChildren: './playlist/playlist.module#PlaylistPageModule' },
-  { path: 'Amigos', loadChildren: './amigos/amigos.module#AmigosPageModule' }
+  { path: '', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'app', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'card', loadChildren: './card/card.module#CardPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  { path: 'producto', loadChildren: './producto/producto.module#ProductoPageModule' }
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

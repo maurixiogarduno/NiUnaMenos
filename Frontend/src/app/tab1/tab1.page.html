@@ -1,0 +1,150 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="'/perfil/'" routerDirection="forward"><ion-icon name="contact" size="large"></ion-icon></ion-button>
+      </ion-buttons>
+    <ion-title>
+      Top
+    </ion-title>
+  </ion-toolbar>
+  <ion-searchbar></ion-searchbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+    <ion-slides pager="true">
+        <ion-slide>
+            <ion-card>
+                <img src="../../assets/productos/dog2.jpeg"/>
+                <div class="card-title">Dog Chow Adultos</div>
+                <div class="card-subtitle">Bulto 25Kg</div>
+                <div class="card-precio1">De: $̶9̶9̶5̶</div>
+                <div class="card-precio2">A: $795</div>
+                <div class="card-porciento"></div>
+                <div class="card-info"></div>
+                <div class="card-button"><ion-button color="danger" [routerLink]="'/producto/'" routerDirection="forward"><strong>PARTICIPAR</strong></ion-button></div>
+                <div class="w3-light-grey">
+                    <div class="w3-container w3-red w3-center" style="width:50%"><strong>62% de 24</strong></div>
+                </div>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card>
+                <img src="../../assets/productos/nucan.jpeg"/>
+                <div class="card-title">Nucan Adultos</div>
+                <div class="card-subtitle">Bulto 25Kg</div>
+                <div class="card-precio1">De: $̶9̶9̶5̶</div>
+                <div class="card-precio2">A: $705</div>
+                <div class="card-porciento"></div>
+                <div class="card-info"></div>
+                <div class="card-button"><ion-button color="danger" [routerLink]="'/card/'" routerDirection="forward">Participar &nbsp;<strong>50% de 20</strong></ion-button></div>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+
+    <div text-center>
+      <ion-button color="primary">Sugerir Producto</ion-button>
+    </div>
+
+    <ion-list lines="none">
+        <ion-list-header>
+          <ion-label>Bebés</ion-label>
+        </ion-list-header>
+        <ion-slides no-padding>
+            <ion-slide no-padding>
+                      <ion-col no-padding>
+                        <ion-card no-padding>
+                          <img src="../../assets/productos/enfagrow.jpeg" alt="">
+                         </ion-card>
+                      </ion-col>
+                      <ion-col no-padding>
+                        <ion-card no-padding>
+                          <img src="../../assets/productos/alfamino.jpeg" alt="">
+                        </ion-card>
+                      </ion-col>
+            </ion-slide>
+          </ion-slides>
+    </ion-list>
+
+    <ion-list lines="none">
+        <ion-list-header>
+          <ion-label>Mascotas</ion-label>
+        </ion-list-header>
+        <ion-slides no-padding>
+            <ion-slide no-padding>
+                      <ion-col no-padding>
+                        <ion-card no-padding>
+                          <img src="../../assets/productos/nucan.jpeg" alt="">
+                         </ion-card>
+                      </ion-col>
+                      <ion-col no-padding>
+                        <ion-card no-padding>
+                          <img src="../../assets/productos/dog.jpeg" alt="">
+                        </ion-card>
+                      </ion-col>
+            </ion-slide>
+          </ion-slides>
+    </ion-list>
+
+    <ion-list lines="none">
+        <ion-list-header>
+          <ion-label>Salud</ion-label>
+        </ion-list-header>
+        <ion-slides no-padding>
+            <ion-slide no-padding>
+                      <ion-col no-padding>
+                        <ion-card no-padding>
+                          <img src="../../assets/productos/medicina1.jpeg" alt="">
+                         </ion-card>
+                      </ion-col>
+                      <ion-col no-padding>
+                        <ion-card no-padding>
+                          <img src="../../assets/productos/medicina2.jpeg" alt="">
+                        </ion-card>
+                      </ion-col>
+            </ion-slide>
+          </ion-slides>
+    </ion-list>
+
+    <ion-list lines="none">
+        <ion-list-header>
+          <ion-label>Deportes</ion-label>
+        </ion-list-header>
+        <ion-slides no-padding>
+            <ion-slide no-padding>
+                      <ion-col no-padding>
+                        <ion-card no-padding>
+                          <img src="../../assets/productos/nike.jpeg" alt="">
+                         </ion-card>
+                      </ion-col>
+                      <ion-col no-padding>
+                        <ion-card no-padding>
+                          <img src="../../assets/productos/nike2.jpeg" alt="">
+                        </ion-card>
+                      </ion-col>
+            </ion-slide>
+          </ion-slides>
+    </ion-list>
+
+    <ion-list-header>
+        <ion-label>Tecnologia</ion-label>
+      </ion-list-header>
+      <ion-slides no-padding>
+          <ion-slide no-padding>
+                    <ion-col no-padding>
+                      <ion-card no-padding>
+                        <img src="../../assets/productos/moto.jpeg" alt="">
+                       </ion-card>
+                    </ion-col>
+                    <ion-col no-padding>
+                      <ion-card no-padding>
+                        <img src="../../assets/productos/bose.jpeg" alt="">
+                      </ion-card>
+                    </ion-col>
+          </ion-slide>
+        </ion-slides>
+
+
+</ion-content>

@@ -1,10 +1,90 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="tutorial-page">
+  <div padding-top text-end>
+    <ion-button fill="clear" [routerLink]="'/login/'" routerDirection="forward">Saltar<ion-icon name="arrow-forward"></ion-icon></ion-button>
+  </div>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  <ion-slides pager="true">
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+                <img src="../../assets/slides/browser.png" alt="">
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h2>Colabora</h2>
+                <p>Junto con muchas personas para comprar productos a precio de mayoreo</p>
+                <br>
+                <br>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <img src="../../assets/slides/payment.png" alt="">
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <h2>Realiza pago digital</h2>
+                    <p>Con tu tarjeta de credito o débito</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-slide>
+
+    <ion-slide>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                  <div></div>
+                    <img src="../../assets/slides/present.png" alt="">
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <h2>Cuando se cumpla la meta</h2>
+                    <p>De colaboración te enviaremos una notificacion y haremos automaticamente el envio</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-slide>
+
+                    <ion-slide>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col>
+                                        <img src="../../assets/slides/support.png" alt="">
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row>
+                                    <ion-col>
+                                            <h2>Si tienes algun problema</h2>
+                                            <p>Nosotros te respaldamos, estamos para ayudarte =)</p>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-slide>
+
+    <ion-slide>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <img src="../../assets/slides/advertising.png" alt="">
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <h2>¿Estas listo?</h2>
+                    <ion-button expand="block" fill="clear" [routerLink]="'/login/'" routerDirection="forward">Comenzar</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

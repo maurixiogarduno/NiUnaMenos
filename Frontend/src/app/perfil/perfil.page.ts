@@ -7,18 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilPage implements OnInit {
 
-  public appAmigos = [
-    {
-      title:'Gaby Hernandez',
-      url: 'Amigos',
-      icon: 'woman'
-    },
-    {
-      title:'Javier Gonzalez',
-      url: 'Amigos',
-      icon: 'men'
-    }
-  ];
+  varNombre = "Juan"
+  varApellido = "Carlos"
 
   constructor() { }
 

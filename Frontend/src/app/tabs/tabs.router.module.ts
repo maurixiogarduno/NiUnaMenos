@@ -1,66 +1,57 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { TabsPage } from './tabs.page';
-import { HomePage } from '../home/home.page';
-import { AboutPage } from '../about/about.page';
-import { ContactPage } from '../contact/contact.page';
-
-import { InicioPage } from '../inicio/inicio.page';
-import { MatchPage } from '../match/match.page';
-import { PerfilPage } from '../perfil/perfil.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: 'user/tabs',
     component: TabsPage,
     children: [
       {
+        path: 'tab1',
+        children: [
+          {
+            path: '',
+            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+          }
+        ]
+      },
+      {
+        path: 'tab2',
+        children: [
+          {
+            path: '',
+            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+          }
+        ]
+      },
+      {
+        path: 'tab3',
+        children: [
+          {
+            path: '',
+            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+          }
+        ]
+      },
+      {
         path: '',
-        redirectTo: '/tabs/(inicio:inicio)',
-        pathMatch: 'full',
-      },
-      {
-        path: 'home',
-        outlet: 'home',
-        component: HomePage
-      },
-      {
-        path: 'about',
-        outlet: 'about',
-        component: AboutPage
-      },
-      {
-        path: 'contact',
-        outlet: 'contact',
-        component: ContactPage
-      },
-      {
-        path: 'inicio',
-        outlet: 'inicio',
-        component: InicioPage
-      },
-      {
-        path: 'match',
-        outlet: 'match',
-        component: MatchPage
-      },
-      {
-        path: 'perfil',
-        outlet: 'perfil',
-        component: PerfilPage
+        redirectTo: 'user/tabs/tab1',
+        pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/(inicio:inicio)',
+    redirectTo: 'user/tabs/tab1',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes)
+  ],
   exports: [RouterModule]
 })
 export class TabsPageRoutingModule {}

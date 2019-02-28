@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button [routerLink]="'/app/'" routerDirection="back"><ion-icon name="arrow-back" size="large"></ion-icon></ion-button>
+        </ion-buttons>
+      <ion-title>Pago</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<main>
+  <article class="slds-card">
+    <div class="slds-card__body slds-card__body_inner">
+      <div class="demo-container slds-border_top slds-border_bottom">
+        <div class="card-wrapper"></div>
+        <div class="form-container">
+          <form class="slds-form slds-form_compound" card container=".card-wrapper" action="javascript:void(0);" card-width="280">
+              <div class="slds-form-element__group">
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element">
+                    <input type="text" name="number" placeholder="Numero de Tarjeta" class="block" card-number/>
+                  </div>
+                </div>
+                <br>
+                <div class="slds-form-element__row">
+                  <div class=" slds-size_1-of-2">
+                    <div class="slds-form-element">
+                      <input type="text" name="first-name" placeholder="Nombre" class="block" card-name/>
+                    </div>
+                  </div>
+                  <br>
+                  <div class=" slds-size_1-of-2">
+                    <div class="slds-form-element">
+                      <input type="text" name="last-name" placeholder="Apellido" class="block" card-name/>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+                <div class="slds-form-element__row">
+                  <div class=" slds-size_1-of-2">
+                    <div class="slds-form-element">
+                      <input type="text" name="expiry" placeholder="MM/YY" class="block" card-expiry/>
+                    </div>
+                  </div>
+                  <br>
+                  <div class=" slds-size_1-of-2">
+                    <div class="slds-form-element">
+                      <input type="text" name="cvc" placeholder="CVC" class="block" card-cvc/>
+                    </div>
+                  </div>
+                </div><br>
+                <div text-center>
+                  <ion-button [routerLink]="'/perfil/'" routerDirection="back" color="primary" expand="block" (click)="presentLoading()">AGREGAR</ion-button>
+                </div><br>
+                <p text-center><a href="https://www.openpay.mx" alt="NPM" title="Install with NPM">
+                  <img align="center" src="../../assets/img/openpay.png" style="height:25px; background:transparent;"/>
+                </a></p>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </article>
+</main>
+
+</ion-content>

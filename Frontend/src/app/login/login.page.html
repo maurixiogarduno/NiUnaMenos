@@ -1,0 +1,30 @@
+<ion-content padding>
+    <ion-button no-padding mode="ios" fill="clear" [routerLink]="'/'" routerDirection="back"><ion-icon name="arrow-back"></ion-icon>Regresar</ion-button>
+  
+    <div text-center>
+  
+      <br>
+      <img src="../../assets/crowdshopping.png" alt="" width=75% height=75%>
+      <br>
+      
+      <ion-item>
+        <ion-label position="stacked">Email:</ion-label>
+        <ion-input type="email" placeholder="Ingresa tu correo"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Password:</ion-label>
+        <ion-input type="password" placeholder="Ingresa tu contraseña"></ion-input>
+      </ion-item>
+  
+      <br>
+  
+      <ion-button color="light" expand="block" fill="solid" (click)="presentLoadingWithOptions()">Iniciar sesion</ion-button>
+      <ion-button expand="block" fill="clear" [routerLink]="'/register/'" routerDirection="forward">Registrarme</ion-button>
+
+      <p>Continuar con:</p>
+
+    <ion-button color="dark" expand="block" fill="solid" [routerLink]="'/app/'" routerDirection="root" (click)="presentLoadingWithOptions()"><ion-icon name="logo-facebook"></ion-icon>Facebook</ion-button>
+  
+    </div>
+  </ion-content>

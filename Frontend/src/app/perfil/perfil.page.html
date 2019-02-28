@@ -1,75 +1,16 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button [routerLink]="'/app/user/tabs/'" routerDirection="back"><ion-icon name="arrow-back" size="large"></ion-icon></ion-button>
+      </ion-buttons>
     <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <h1 padding-start>Amigos</h1>
-    <ion-list>
-        <ion-item *ngFor="let a of appAmigos" [href]="a.url" [routerDirection]="'forward'">
-            <ion-avatar><img src="../../assets/img/{{a.icon}}.jpg" alt=""></ion-avatar>
-        <!-- <ion-icon slot="start" [name]="a.icon" color="primary"></ion-icon> -->
-        <ion-label>   {{a.title}}</ion-label>
-      </ion-item>
-    </ion-list>
-  
-  <h1 padding-start>Eventos</h1>
-  <ion-slides pager="true" no-padding>
-      <ion-slide no-padding>
-                <ion-col no-padding>
-                  <ion-card no-padding>
-                    <img src="../../assets/eventos/f1.jpg" alt="">
-                   </ion-card>
-                </ion-col>
-                <ion-col no-padding>
-                  <ion-card no-padding>
-                    <img src="../../assets/eventos/f2.jpg" alt="">
-                  </ion-card>
-                </ion-col>
-      </ion-slide>
-    
-      <ion-slide no-padding>
-          <ion-col no-padding>
-            <ion-card no-padding>
-              <img src="../../assets/eventos/f3.jpg" alt="">
-             </ion-card>
-          </ion-col>
-          <ion-col no-padding>
-            <ion-card no-padding>
-              <img src="../../assets/eventos/f4.PNG" alt="">
-            </ion-card>
-          </ion-col>
-      </ion-slide>
-
-    </ion-slides>
-
-    <h1 padding-start>Productos</h1>
-
-    <ion-row>
-    <ion-col no-padding>
-        <ion-card no-padding>
-          <img src="../../assets/productos/playera.jpg" alt="">
-         </ion-card>
-      </ion-col>
-      <ion-col no-padding>
-        <ion-card no-padding>
-          <img src="../../assets/productos/p2.jpg" alt="">
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-        <ion-col no-padding>
-            <ion-card no-padding>
-              <img src="../../assets/productos/p3.jpg" alt="">
-             </ion-card>
-          </ion-col>
-          <ion-col no-padding>
-            <ion-card no-padding>
-              <img src="../../assets/productos/p4.jpg" alt="">
-            </ion-card>
-          </ion-col>
-        </ion-row>
-
+<ion-content padding>
+<div text-center>
+  <img src="../../assets/user.png" alt="">
+  <h3>{{varNombre}} {{varApellido}}</h3>
+  <ion-button color="light" expand="block" fill="solid" [routerLink]="'/card/'" routerDirection="forward">Agregar Tarjeta</ion-button>
+</div>
 </ion-content>
