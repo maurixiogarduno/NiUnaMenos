@@ -7,9 +7,39 @@
           <ion-button [routerLink]="'/perfil/'" routerDirection="forward"><ion-icon name="contact" size="large"></ion-icon></ion-button>
       </ion-buttons>
     <ion-title>
-      Tab Two
+      Denuncia
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding>
+    <ion-item>
+        <ion-label>Tipo de maltrato</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-select-option value="f">Acoso laboral</ion-select-option>
+          <ion-select-option value="m">Acoso sexual</ion-select-option>
+          <ion-select-option value="m">Maltrato familiar</ion-select-option>
+        </ion-select>
+      </ion-item>
+    <ion-item>
+        <ion-label position="floating">Nombre del denunciado</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Nombre de la empresa</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Campo3</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Campo4</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+
+    <br>
+    <br>
+    <br>
+<ion-button color="primary" expand="block" fill="solid">Enviar</ion-button>
+</ion-content>

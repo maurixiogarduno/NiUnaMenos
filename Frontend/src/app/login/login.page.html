@@ -3,9 +3,7 @@
   
     <div text-center>
   
-      <br>
-      <img src="../../assets/crowdshopping.png" alt="" width=75% height=75%>
-      <br>
+      <img src="../../assets/ya.png" alt="" width=75% height=75%>
       
       <ion-item>
         <ion-label position="stacked">Email:</ion-label>
@@ -19,12 +17,12 @@
   
       <br>
   
-      <ion-button color="light" expand="block" fill="solid" (click)="presentLoadingWithOptions()">Iniciar sesion</ion-button>
+      <ion-button color="primary" expand="block" fill="solid" [routerLink]="'/app/'" (click)="presentLoadingWithOptions()">Iniciar sesion</ion-button>
       <ion-button expand="block" fill="clear" [routerLink]="'/register/'" routerDirection="forward">Registrarme</ion-button>
 
-      <p>Continuar con:</p>
+      <!-- <p>Continuar con:</p>
 
-    <ion-button color="dark" expand="block" fill="solid" [routerLink]="'/app/'" routerDirection="root" (click)="presentLoadingWithOptions()"><ion-icon name="logo-facebook"></ion-icon>Facebook</ion-button>
+    <ion-button color="dark" expand="block" fill="solid" [routerLink]="'/app/'" routerDirection="root" (click)="presentLoadingWithOptions()"><ion-icon name="logo-facebook"></ion-icon>Facebook</ion-button> -->
   
     </div>
   </ion-content>
