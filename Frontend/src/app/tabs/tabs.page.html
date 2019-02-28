@@ -1,0 +1,32 @@
+<ion-tabs>
+
+  <ion-tab tab="inicio">
+    <ion-router-outlet name="inicio"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab tab="match">
+    <ion-router-outlet name="match"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab tab="perfil">
+    <ion-router-outlet name="perfil"></ion-router-outlet>
+  </ion-tab>
+
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="inicio" href="/tabs/(inicio:inicio)">
+      <ion-icon name="musical-notes"></ion-icon>
+      <ion-label>Inicio</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="match" href="/tabs/(match:match)">
+      <ion-icon name="flame"></ion-icon>
+      <ion-label>Match</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="perfil" href="/tabs/(perfil:perfil)">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>Amigos</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>

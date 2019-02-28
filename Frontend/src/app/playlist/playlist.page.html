@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-button color="white" href="/tabs/(inicio:inicio)" routerDirection="reward"><ion-icon size="large" name="arrow-round-back"></ion-icon></ion-button>
+    <ion-title>Playlist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item mode="ios" *ngFor="let atm of atmService.atms">
+          <ion-icon color="primary" slot="start" name="musical-note"></ion-icon>
+          <ion-label>
+            <h2>{{ atm.Identification }}</h2>
+            <h3>{{ atm.Name }}</h3>
+          </ion-label>
+          <a (click)="editAtm(atm)">
+              <i class="material-icons"><ion-icon name="create"></ion-icon></i>
+            </a>
+            <a (click)="deleteAtm(atm._id, atmForm)">
+              <i class="material-icons"><ion-icon name="trash"></ion-icon></i>
+            </a>
+        </ion-item>
+    </ion-list>
+
+    <div text-center>
+        <ion-button mode="ios" href="http://localhost:3002/openbanking">Ver API - Compatible</ion-button>
+    </div>
+
+</ion-content>

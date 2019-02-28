@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-button color="white" href="/tabs/(inicio:inicio)" routerDirection="reward"><ion-icon size="large" name="arrow-round-back"></ion-icon></ion-button>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h1 padding-start>Crear Un Playlist Inteligente:</h1>
+            <ion-card mode="ios">
+    
+            <form #atmForm="ngForm" (ngSubmit)="addAtm(atmForm)">
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="atmService.selectedAtm._id">
+            
+            <ion-item>
+              <ion-label position="stacked">Nombre</ion-label>
+              <ion-input type="text" name="Identification" #Identification="ngModel" [(ngModel)]="atmService.selectedAtm.Identification" placeholder="Ingresa el Nombre de tu Playlist"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label position="stacked">Artista / Genero</ion-label>
+              <ion-input type="text" name="Name" #Name="ngModel" [(ngModel)]="atmService.selectedAtm.Name" placeholder="Ingresa un Artista o Genero"></ion-input>
+            </ion-item>
+    
+            <br>
+    
+            <ion-button padding mode="ios" expand="block" fill="solid" type="submit">Crear Playlist</ion-button>
+            <!-- <ion-button mode="ios" expand="block" fill="clear" href="/Registro" routerDirection="top">Limpiar</ion-button> -->
+            </form>
+            </ion-card>
+    
+            <ion-list>
+                <ion-item *ngFor="let p of playlist">
+                  <ion-label>
+                    <h2>{{ p }}</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+</ion-content>

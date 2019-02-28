@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-slides pager="true" no-padding>
+        <ion-slide no-padding>
+                  <ion-col no-padding>
+                    <ion-card no-padding>
+                      <img src="../../assets/covers/cover1.jpg" alt="">
+                     </ion-card>
+                  </ion-col>
+                  <ion-col no-padding>
+                    <ion-card no-padding>
+                      <img src="../../assets/covers/cover2.jpg" alt="">
+                    </ion-card>
+                  </ion-col>
+        </ion-slide>
+      
+        <ion-slide no-padding>
+            <ion-col no-padding>
+              <ion-card no-padding>
+                <img src="../../assets/covers/cover3.jpg" alt="">
+               </ion-card>
+            </ion-col>
+            <ion-col no-padding>
+              <ion-card no-padding>
+                <img src="../../assets/covers/cover4.jpeg" alt="">
+              </ion-card>
+            </ion-col>
+        </ion-slide>
+
+        <ion-slide no-padding>
+            <ion-col no-padding>
+              <ion-card no-padding>
+                <img src="../../assets/covers/cover5.jpg" alt="">
+               </ion-card>
+            </ion-col>
+            <ion-col no-padding>
+              <ion-card no-padding>
+                <img src="../../assets/covers/cover6.jpg" alt="">
+              </ion-card>
+            </ion-col>
+        </ion-slide>
+
+      </ion-slides>
+
+      <ion-list>
+            <ion-item *ngFor="let p of appPages" [href]="p.url" [routerDirection]="'forward'">
+            <ion-icon slot="start" [name]="p.icon" color="primary"></ion-icon>
+            <ion-label>{{p.title}}</ion-label>
+          </ion-item>
+      </ion-list>
+
+      <h1 padding-start>Biblioteca</h1>
+    
+        <ion-row>
+          <ion-col no-padding>
+            <ion-card no-padding>
+             <img src="../../assets/covers/cover4.jpeg" alt="">
+            </ion-card>
+          </ion-col>
+          <ion-col no-padding>
+           <ion-card no-padding>
+            <img src="../../assets/covers/cover5.jpg" alt="">
+          </ion-card>
+          </ion-col>
+        </ion-row>
+
+          <ion-row>
+            <ion-col no-padding>
+              <ion-card no-padding>
+               <img src="../../assets/covers/cover6.jpg" alt="">
+              </ion-card>
+            </ion-col>
+            <ion-col no-padding>
+             <ion-card no-padding>
+              <img src="../../assets/covers/cover7.jpg" alt="">
+            </ion-card>
+            </ion-col>
+          </ion-row>
+
+          <div text-center padding margin>
+            <img src="../../assets/img/universal.png" alt="">
+          </div>
+
+</ion-content>
